@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Activities – Z.P. Urdu School Porgavhan</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="school-emblem">🏫</div>
+    <div class="header-text">
+      <h1>जिल्हा परिषद उर्दू शाळा पोरगव्हाण</h1>
+      <div class="subtitle">पंचायत समिती मोर्शी, जिल्हा अमरावती</div>
+      <div class="udise">UDISE Code: 27071105402</div>
+    </div>
+    <div class="header-urdu">
+      ضلع پریشد اردو اسکول پورگوہان
+      <span class="urdu-sub">پنچایت سمیتی مورشی، ضلع امراوتی</span>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">🏠 Home</a>
+      <a href="photos.html">📷 Photos</a>
+      <a href="videos.html">🎬 Videos</a>
+      <a href="activity.html" class="active">🎯 Activities</a>
+      <a href="result.html">📊 Results</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="page-title">
+    <h2>School Activities</h2>
+    <p>Empowering students beyond the classroom</p>
+  </div>
+
+  <div class="activity-grid">
+
+    <!-- Sports Day -->
+    <div class="activity-card">
+      <div class="activity-card-info">
+        <div class="icon">🏃</div>
+        <div>
+          <h3>Sports Day</h3>
+          <p>Annual sports day celebrating athletic talent — track and field events, team games, and prizes for all participants.</p>
+        </div>
+      </div>
+      <div class="activity-photos">
+        <div class="ap-item" onclick="openLb('sports_day',0)">
+          <img src="photos/sports_day/spd1.jpg" alt="Sports Day">
+          <div class="ap-overlay">🔍</div>
+        </div>
+        <div class="ap-item" onclick="openLb('sports_day',1)">
+          <img src="photos/sports_day/spd2.jpg" alt="Sports Day">
+          <div class="ap-overlay">🔍</div>
+        </div>
+        <div class="ap-item" onclick="openLb('sports_day',2)">
+          <img src="photos/sports_day/spd3.jpg" alt="Sports Day">
+          <div class="ap-overlay">🔍</div>
+          <div class="ap-more">+4 more</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Science Exhibition -->
+    <div class="activity-card">
+      <div class="activity-card-info">
+        <div class="icon">🔬</div>
+        <div>
+          <h3>Science Exhibition</h3>
+          <p>Students showcase innovative science models and experiments, fostering curiosity and scientific thinking.</p>
+        </div>
+      </div>
+      <div class="activity-photos">
+        <div class="ap-item" onclick="openLb('science_exhibition',0)">
+          <img src="photos/science_exhibition/se1.jpg" alt="Science Exhibition">
+          <div class="ap-overlay">🔍</div>
+        </div>
+        <div class="ap-item" onclick="openLb('science_exhibition',1)">
+          <img src="photos/science_exhibition/se2.jpg" alt="Science Exhibition">
+          <div class="ap-overlay">🔍</div>
+        </div>
+        <div class="ap-item" onclick="openLb('science_exhibition',2)">
+          <img src="photos/science_exhibition/se3.jpg" alt="Science Exhibition">
+          <div class="ap-overlay">🔍</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cultural Program -->
+    <div class="activity-card">
+      <div class="activity-card-info">
+        <div class="icon">🎭</div>
+        <div>
+          <h3>Cultural Program</h3>
+          <p>Dance, drama, poetry and music performances celebrating our rich cultural heritage and student talent.</p>
+        </div>
+      </div>
+      <div class="activity-photos">
+        <div class="ap-item" onclick="openLb('cultural_program',0)">
+          <img src="photos/cultural_program/cp1.jpg" alt="Cultural Program">
+          <div class="ap-overlay">🔍</div>
+        </div>
+        <div class="ap-item" onclick="openLb('cultural_program',1)">
+          <img src="photos/cultural_program/cp2.jpg" alt="Cultural Program">
+          <div class="ap-overlay">🔍</div>
+        </div>
+        <div class="ap-item" onclick="openLb('cultural_program',2)">
+          <img src="photos/cultural_program/cp3.jpg" alt="Cultural Program">
+          <div class="ap-overlay">🔍</div>
+          <div class="ap-more">+8 more</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Medical Checkup -->
+    <div class="activity-card">
+      <div class="activity-card-info">
+        <div class="icon">🩺</div>
+        <div>
+          <h3>Medical Checkup</h3>
+          <p>Regular health and wellness checkups ensuring the physical wellbeing of every student at our school.</p>
+        </div>
+      </div>
+      <div class="activity-photos">
+        <div class="ap-item" onclick="openLb('medical_checkup',0)">
+          <img src="photos/medical_checkup/mdc1.jpg" alt="Medical Checkup">
+          <div class="ap-overlay">🔍</div>
+        </div>
+        <div class="ap-item" onclick="openLb('medical_checkup',1)">
+          <img src="photos/medical_checkup/mdc2.jpg" alt="Medical Checkup">
+          <div class="ap-overlay">🔍</div>
+        </div>
+        <div class="ap-item" onclick="openLb('medical_checkup',2)">
+          <img src="photos/medical_checkup/mdc3.jpg" alt="Medical Checkup">
+          <div class="ap-overlay">🔍</div>
+          <div class="ap-more">+1 more</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Self Defence Training -->
+    <div class="activity-card">
+      <div class="activity-card-info">
+        <div class="icon">🥋</div>
+        <div>
+          <h3>Self Defence Training</h3>
+          <p>Empowering students — especially girls — with self-defence skills, confidence, and personal safety awareness.</p>
+        </div>
+      </div>
+      <div class="activity-photos">
+        <div class="ap-item" onclick="openLb('self_defence_training',0)">
+          <img src="photos/self_defence_training/sdt1.jpg" alt="Self Defence Training">
+          <div class="ap-overlay">🔍</div>
+        </div>
+        <div class="ap-item" onclick="openLb('self_defence_training',1)">
+          <img src="photos/self_defence_training/sdt2.jpg" alt="Self Defence Training">
+          <div class="ap-overlay">🔍</div>
+        </div>
+        <div class="ap-item" onclick="openLb('self_defence_training',2)">
+          <img src="photos/self_defence_training/sdt3.jpg" alt="Self Defence Training">
+          <div class="ap-overlay">🔍</div>
+          <div class="ap-more">+5 more</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reading Campaign -->
+    <div class="activity-card">
+      <div class="activity-card-info">
+        <div class="icon">📖</div>
+        <div>
+          <h3>Reading Campaign</h3>
+          <p>Encouraging a love of reading through our school library and regular reading competitions in Urdu, Hindi and Marathi.</p>
+        </div>
+      </div>
+      <div class="activity-photos">
+        <div class="ap-item" onclick="openLb('reading_campaign',0)">
+          <img src="photos/reading_campaign/rc1.jpg" alt="Reading Campaign">
+          <div class="ap-overlay">🔍</div>
+        </div>
+        <div class="ap-item" onclick="openLb('reading_campaign',1)">
+          <img src="photos/reading_campaign/rc2.jpg" alt="Reading Campaign">
+          <div class="ap-overlay">🔍</div>
+        </div>
+        <div class="ap-item" onclick="openLb('reading_campaign',2)">
+          <img src="photos/reading_campaign/rc3.jpg" alt="Reading Campaign">
+          <div class="ap-overlay">🔍</div>
+          <div class="ap-more">+3 more</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLb()">✕</button>
+  <button class="lightbox-nav prev" onclick="shiftLb(-1)">&#8249;</button>
+  <img id="lbImg" src="" alt="Activity Photo">
+  <button class="lightbox-nav next" onclick="shiftLb(1)">&#8250;</button>
+</div>
+
+<footer>
+  <p>&copy; 2026 Z.P. Urdu School Porgavhan &nbsp;|&nbsp; Panchayat Samiti Morshi, Amravati</p>
+</footer>
+
+<script>
+function toggleNav() {
+  document.getElementById('navLinks').classList.toggle('open');
+}
+
+const albums = {
+  sports_day: ['photos/sports_day/spd1.jpg','photos/sports_day/spd2.jpg','photos/sports_day/spd3.jpg',
+    'photos/sports_day/spd4.jpg','photos/sports_day/spd5.jpg','photos/sports_day/spd6.jpg','photos/sports_day/spd7.jpg'],
+  science_exhibition: ['photos/science_exhibition/se1.jpg','photos/science_exhibition/se2.jpg','photos/science_exhibition/se3.jpg'],
+  cultural_program: ['photos/cultural_program/cp1.jpg','photos/cultural_program/cp2.jpg','photos/cultural_program/cp3.jpg',
+    'photos/cultural_program/cp4.jpg','photos/cultural_program/cp5.jpg','photos/cultural_program/cp6.jpg',
+    'photos/cultural_program/cp7.jpg','photos/cultural_program/cp8.jpg','photos/cultural_program/cp9.jpg',
+    'photos/cultural_program/cp10.jpg','photos/cultural_program/cp11.jpg'],
+  medical_checkup: ['photos/medical_checkup/mdc1.jpg','photos/medical_checkup/mdc2.jpg',
+    'photos/medical_checkup/mdc3.jpg','photos/medical_checkup/mdc4.jpg'],
+  self_defence_training: ['photos/self_defence_training/sdt1.jpg','photos/self_defence_training/sdt2.jpg',
+    'photos/self_defence_training/sdt3.jpg','photos/self_defence_training/sdt4.jpg',
+    'photos/self_defence_training/sdt5.jpg','photos/self_defence_training/sdt6.jpg',
+    'photos/self_defence_training/sdt7.jpg','photos/self_defence_training/sdt8.jpg'],
+  reading_campaign: ['photos/reading_campaign/rc1.jpg','photos/reading_campaign/rc2.jpg','photos/reading_campaign/rc3.jpg',
+    'photos/reading_campaign/rc4.jpg','photos/reading_campaign/rc5.jpg','photos/reading_campaign/rc6.jpg']
+};
+
+let currentAlbum = [], lbIndex = 0;
+
+function openLb(album, idx) {
+  currentAlbum = albums[album];
+  lbIndex = idx;
+  document.getElementById('lbImg').src = currentAlbum[lbIndex];
+  document.getElementById('lightbox').classList.add('open');
+}
+function closeLb() {
+  document.getElementById('lightbox').classList.remove('open');
+}
+function shiftLb(dir) {
+  lbIndex = (lbIndex + dir + currentAlbum.length) % currentAlbum.length;
+  document.getElementById('lbImg').src = currentAlbum[lbIndex];
+}
+document.getElementById('lightbox').addEventListener('click', function(e) {
+  if (e.target === this) closeLb();
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeLb();
+  if (e.key === 'ArrowRight') shiftLb(1);
+  if (e.key === 'ArrowLeft') shiftLb(-1);
+});
+</script>
+</body>
+</html>

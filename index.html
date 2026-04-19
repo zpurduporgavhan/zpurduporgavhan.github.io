@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home – Z.P. Urdu School Porgavhan</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="school-emblem">🏫</div>
+    <div class="header-text">
+      <h1>जिल्हा परिषद उर्दू शाळा पोरगव्हाण</h1>
+      <div class="subtitle">पंचायत समिती मोर्शी, जिल्हा अमरावती</div>
+      <div class="udise">UDISE Code: 27071105402</div>
+    </div>
+    <div class="header-urdu">
+      ضلع پریشد اردو اسکول پورگوہان
+      <span class="urdu-sub">پنچایت سمیتی مورشی، ضلع امراوتی</span>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="active">🏠 Home</a>
+      <a href="photos.html">📷 Photos</a>
+      <a href="videos.html">🎬 Videos</a>
+      <a href="activity.html">🎯 Activities</a>
+      <a href="result.html">📊 Results</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Marquee -->
+<div class="marquee-bar">
+  <div class="marquee-track">
+    <span><span class="bell">🔔</span> Results for Academic Session 2025–26 will be announced on 01 May 2026. &nbsp;|&nbsp; 🔔 Results for Academic Session 2025–26 will be announced on 01 May 2026. &nbsp;|&nbsp; 🔔 निकाल शैक्षणिक वर्ष 2025–26 दिनांक 01 मे 2026 रोजी जाहीर होतील. &nbsp;|&nbsp; 🔔 نتائج تعلیمی سیشن 2025-26 یکم مئی 2026 کو اعلان کیے جائیں گے۔</span>
+    <span><span class="bell">🔔</span> Results for Academic Session 2025–26 will be announced on 01 May 2026. &nbsp;|&nbsp; 🔔 Results for Academic Session 2025–26 will be announced on 01 May 2026. &nbsp;|&nbsp; 🔔 निकाल शैक्षणिक वर्ष 2025–26 दिनांक 01 मे 2026 रोजी जाहीर होतील. &nbsp;|&nbsp; 🔔 نتائج تعلیمی سیشن 2025-26 یکم مئی 2026 کو اعلان کیے جائیں گے۔</span>
+  </div>
+</div>
+
+<main>
+  <!-- Slider -->
+  <div class="slider" id="slider">
+    <img src="photos/ChatGPT Image Apr 18, 2026, 11_24_27 PM.png" class="slide active" alt="School">
+    <img src="photos/ChatGPT Image Apr 18, 2026, 11_33_26 PM.png" class="slide" alt="School">
+    <img src="photos/ChatGPT Image Apr 18, 2026, 11_30_01 PM.png" class="slide" alt="School">
+    <img src="photos/ChatGPT Image Apr 18, 2026, 11_27_04 PM.png" class="slide" alt="School">
+    <div class="slider-caption">जिल्हा परिषद उर्दू शाळा पोरगव्हाण — शिक्षण, संस्कार, विकास</div>
+    <div class="slider-dots" id="dots"></div>
+  </div>
+
+  <!-- Welcome Info Cards -->
+  <div class="page-title">
+    <h2>About Our School</h2>
+    <p>Nurturing young minds in Porgavhan since decades</p>
+  </div>
+
+  <div class="info-cards">
+    <div class="info-card">
+      <div class="icon">📚</div>
+      <h3>Quality Education</h3>
+      <p>We provide holistic, Urdu-medium education aligned with Maharashtra state curriculum.</p>
+    </div>
+    <div class="info-card">
+      <div class="icon">🏆</div>
+      <h3>Excellent Results</h3>
+      <p>Consistently high pass rates with students excelling in academics and co-curricular areas.</p>
+    </div>
+    <div class="info-card">
+      <div class="icon">🤝</div>
+      <h3>Community Driven</h3>
+      <p>Supported by Zilla Parishad and the dedicated parents and guardians of Porgavhan.</p>
+    </div>
+    <div class="info-card">
+      <div class="icon">🎨</div>
+      <h3>Rich Activities</h3>
+      <p>Sports, science, cultural programs, self-defence training and much more for every student.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 Z.P. Urdu School Porgavhan &nbsp;|&nbsp; Panchayat Samiti Morshi, Amravati &nbsp;|&nbsp;
+    <a href="photos.html">Photos</a> · <a href="videos.html">Videos</a> · <a href="result.html">Results</a>
+  </p>
+</footer>
+
+<script>
+function toggleNav() {
+  document.getElementById('navLinks').classList.toggle('open');
+}
+
+// Slider
+const slides = document.querySelectorAll('.slide');
+const dotsContainer = document.getElementById('dots');
+let current = 0;
+
+slides.forEach((_, i) => {
+  const d = document.createElement('div');
+  d.className = 'dot' + (i === 0 ? ' active' : '');
+  d.onclick = () => goTo(i);
+  dotsContainer.appendChild(d);
+});
+
+function goTo(n) {
+  slides[current].classList.remove('active');
+  dotsContainer.children[current].classList.remove('active');
+  current = (n + slides.length) % slides.length;
+  slides[current].classList.add('active');
+  dotsContainer.children[current].classList.add('active');
+}
+
+setInterval(() => goTo(current + 1), 3500);
+</script>
+</body>
+</html>

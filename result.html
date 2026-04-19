@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Results – Z.P. Urdu School Porgavhan</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="school-emblem">🏫</div>
+    <div class="header-text">
+      <h1>जिल्हा परिषद उर्दू शाळा पोरगव्हाण</h1>
+      <div class="subtitle">पंचायत समिती मोर्शी, जिल्हा अमरावती</div>
+      <div class="udise">UDISE Code: 27071105402</div>
+    </div>
+    <div class="header-urdu">
+      ضلع پریشد اردو اسکول پورگوہان
+      <span class="urdu-sub">پنچایت سمیتی مورشی، ضلع امراوتی</span>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">🏠 Home</a>
+      <a href="photos.html">📷 Photos</a>
+      <a href="videos.html">🎬 Videos</a>
+      <a href="activity.html">🎯 Activities</a>
+      <a href="result.html" class="active">📊 Results</a>
+    </div>
+  </div>
+</nav>
+
+  <!-- Marquee -->
+<div class="marquee-bar">
+  <div class="marquee-track">
+    <span><span class="bell">🔔</span> Results for Academic Session 2025–26 will be announced on 01 May 2026. &nbsp;|&nbsp; 🔔 Results for Academic Session 2025–26 will be announced on 01 May 2026. &nbsp;|&nbsp; 🔔 निकाल शैक्षणिक वर्ष 2025–26 दिनांक 01 मे 2026 रोजी जाहीर होतील. &nbsp;|&nbsp; 🔔 نتائج تعلیمی سیشن 2025-26 یکم مئی 2026 کو اعلان کیے جائیں گے۔</span>
+    <span><span class="bell">🔔</span> Results for Academic Session 2025–26 will be announced on 01 May 2026. &nbsp;|&nbsp; 🔔 Results for Academic Session 2025–26 will be announced on 01 May 2026. &nbsp;|&nbsp; 🔔 निकाल शैक्षणिक वर्ष 2025–26 दिनांक 01 मे 2026 रोजी जाहीर होतील. &nbsp;|&nbsp; 🔔 نتائج تعلیمی سیشن 2025-26 یکم مئی 2026 کو اعلان کیے جائیں گے۔</span>
+  </div>
+</div>
+
+<main>
+
+
+
+  <div class="page-title">
+    <h2>Student Results</h2>
+    <p>Academic Year 2025–26</p>
+  </div>
+
+  <!-- Roll Number Search -->
+  <div class="result-search-box">
+    <h3>🔍 View Your Result</h3>
+    <p>Enter your Roll Number to view your individual result card</p>
+    <div class="search-row">
+      <input type="text" id="rollInput" placeholder="" maxlength="20"
+             onkeydown="if(event.key==='Enter') viewResult()">
+      <button onclick="viewResult()">View Result</button>
+    </div>
+    <div class="search-error" id="searchError">
+      ⚠️ No result found for this Roll Number. Please check and try again.
+    </div>
+  </div>
+
+  <!-- Summary Stats -->
+  <!-- <div class="result-summary">
+    <div class="stat-card">
+      <div class="num">90%</div>
+      <div class="label">Overall Pass Rate</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">42</div>
+      <div class="label">Students Appeared</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">38</div>
+      <div class="label">Students Passed</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">12</div>
+      <div class="label">Distinctions</div>
+    </div>
+  </div> -->
+
+  <!-- Class-wise Result Status
+  <div class="page-title" style="margin-top:40px">
+    <h2>Class-wise Result Status</h2>
+    <p>Academic Year 2025–26</p>
+  </div>
+
+  <div class="result-table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th>Students Enrolled</th>
+          <th>Appeared</th>
+          <th>Passed</th>
+          <th>Pass %</th>
+          <th>Result Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Class 1</strong></td>
+          <td>10</td><td>10</td><td>10</td><td>100%</td>
+          <td><span class="badge badge-declared">✅ Declared</span></td>
+        </tr>
+        <tr>
+          <td><strong>Class 2</strong></td>
+          <td>8</td><td>8</td><td>8</td><td>100%</td>
+          <td><span class="badge badge-declared">✅ Declared</span></td>
+        </tr>
+        <tr>
+          <td><strong>Class 3</strong></td>
+          <td>9</td><td>9</td><td>8</td><td>89%</td>
+          <td><span class="badge badge-declared">✅ Declared</span></td>
+        </tr>
+        <tr>
+          <td><strong>Class 4</strong></td>
+          <td>7</td><td>7</td><td>6</td><td>86%</td>
+          <td><span class="badge badge-declared">✅ Declared</span></td>
+        </tr>
+        <tr>
+          <td><strong>Class 5</strong></td>
+          <td>8</td><td>8</td><td>6</td><td>75%</td>
+          <td><span class="badge badge-declared">✅ Declared</span></td>
+        </tr>
+        <tr>
+          <td><strong>Class 6</strong></td>
+          <td>6</td><td>6</td><td>6</td><td>100%</td>
+          <td><span class="badge badge-declared">✅ Declared</span></td>
+        </tr>
+        <tr>
+          <td><strong>Class 7</strong></td>
+          <td>5</td><td>5</td><td>4</td><td>80%</td>
+          <td><span class="badge badge-declared">✅ Declared</span></td>
+        </tr>
+        <tr>
+          <td><strong>Class 8</strong></td>
+          <td>7</td><td>7</td><td>7</td><td>100%</td>
+          <td><span class="badge badge-declared">✅ Declared</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div> -->
+
+  <!-- <p style="margin-top:14px; font-size:0.82rem; color:var(--text-muted); text-align:center;">
+    * Results for Class 1 to Class 8 have been declared for the Academic Year 2025–26.
+  </p> -->
+</main>
+
+<!-- Result Image Modal -->
+<div class="result-modal" id="resultModal">
+  <button class="result-modal-close" onclick="closeModal()">✕</button>
+  <img id="resultImg" src="" alt="Student Result">
+  <a id="resultDownload" href="" download class="result-modal-dl">⬇ Download Result</a>
+</div>
+
+<footer>
+  <p>&copy; 2026 Z.P. Urdu School Porgavhan &nbsp;|&nbsp; Panchayat Samiti Morshi, Amravati</p>
+</footer>
+
+<script>
+function toggleNav() {
+  document.getElementById('navLinks').classList.toggle('open');
+}
+
+function viewResult() {
+  const roll = document.getElementById('rollInput').value.trim();
+  const errEl = document.getElementById('searchError');
+  errEl.style.display = 'none';
+
+  if (!roll) {
+    errEl.textContent = '⚠️ Please enter a Roll Number.';
+    errEl.style.display = 'block';
+    return;
+  }
+
+  const imgPath = 'results/' + roll + '.jpg';
+  const testImg = new Image();
+
+  testImg.onload = function () {
+    // Image exists — show modal
+    document.getElementById('resultImg').src = imgPath;
+    document.getElementById('resultDownload').href = imgPath;
+    document.getElementById('resultDownload').download = roll + '.jpg';
+    document.getElementById('resultModal').classList.add('open');
+  };
+
+  testImg.onerror = function () {
+    errEl.textContent = '⚠️ No result found for Roll Number "' + roll + '". Please check and try again.';
+    errEl.style.display = 'block';
+  };
+
+  testImg.src = imgPath;
+}
+
+function closeModal() {
+  document.getElementById('resultModal').classList.remove('open');
+  document.getElementById('resultImg').src = '';
+}
+
+document.getElementById('resultModal').addEventListener('click', function (e) {
+  if (e.target === this) closeModal();
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') closeModal();
+});
+</script>
+</body>
+</html>

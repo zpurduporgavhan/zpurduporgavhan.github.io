@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Videos – Z.P. Urdu School Porgavhan</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="school-emblem">🏫</div>
+    <div class="header-text">
+      <h1>जिल्हा परिषद उर्दू शाळा पोरगव्हाण</h1>
+      <div class="subtitle">पंचायत समिती मोर्शी, जिल्हा अमरावती</div>
+      <div class="udise">UDISE Code: 27071105402</div>
+    </div>
+    <div class="header-urdu">
+      ضلع پریشد اردو اسکول پورگوہان
+      <span class="urdu-sub">پنچایت سمیتی مورشی، ضلع امراوتی</span>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">🏠 Home</a>
+      <a href="photos.html">📷 Photos</a>
+      <a href="videos.html" class="active">🎬 Videos</a>
+      <a href="activity.html">🎯 Activities</a>
+      <a href="result.html">📊 Results</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="page-title">
+    <h2>School Videos</h2>
+    <p>Watch our school events, programs and activities</p>
+  </div>
+
+  <div class="video-grid">
+
+
+    <!-- START --- Add more video cards below by copying the block above and changing the YouTube video ID -->
+    <!-- For Vidoe link replace watch?v= with embed/          -->
+    <div class="video-card">
+      <!--
+        IMPORTANT: YouTube embed URLs must use:
+          https://www.youtube.com/embed/VIDEO_ID
+        NOT the regular watch URL.
+        The video ID is the part after ?v= in the watch URL.
+        Original URL: https://www.youtube.com/watch?v=YwTjVyqiKqA&t=179s
+        Embed URL:   https://www.youtube.com/embed/YwTjVyqiKqA?start=179
+      -->
+      <iframe
+        src="https://www.youtube.com/embed/YwTjVyqiKqA?start=179"
+        title="School Video"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+      <div class="video-info">
+        <h3>School Program Video</h3>
+        <p>A glimpse of our school's programs and activities.</p>
+      </div>
+    </div>
+    <!-- END --- Add more video cards below by copying the block above and changing the YouTube video ID -->
+
+    <!-- START --- Add more video cards below by copying the block above and changing the YouTube video ID -->
+    <div class="video-card">
+      <!--
+        IMPORTANT: YouTube embed URLs must use:
+          https://www.youtube.com/embed/VIDEO_ID
+      -->
+      <iframe
+        src="https://www.youtube.com/embed/WC9AQhGIoos"
+        title="Election Awareness Video"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+      <div class="video-info">
+        <h3>School Program Video for Election Awareness</h3>
+        <p>A glimpse of our school's programs and activities.</p>
+      </div>
+    </div>
+    <!-- END --- Add more video cards below by copying the block above and changing the YouTube video ID -->
+
+
+    <!-- START --- Add more video cards below by copying the block above and changing the YouTube video ID -->
+    <div class="video-card">
+      <!--
+        IMPORTANT: YouTube embed URLs must use:
+          https://www.youtube.com/embed/VIDEO_ID
+      -->
+      <iframe
+        src="https://www.youtube.com/embed/tYzu567if_c"
+        title="Election Awareness Video"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+      <div class="video-info">
+        <h3>Award Distribution to Home Work Heros</h3>
+        <p>A glimpse of our school's programs and activities.</p>
+      </div>
+    </div>
+    <!-- END --- Add more video cards below by copying the block above and changing the YouTube video ID -->
+
+
+
+
+
+
+
+
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 Z.P. Urdu School Porgavhan &nbsp;|&nbsp; Panchayat Samiti Morshi, Amravati</p>
+</footer>
+
+<script>
+function toggleNav() {
+  document.getElementById('navLinks').classList.toggle('open');
+}
+</script>
+</body>
+</html>
