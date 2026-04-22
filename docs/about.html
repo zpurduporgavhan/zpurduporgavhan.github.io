@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About – Z.P. Urdu School Porgavhan</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+  margin-bottom: 40px;
+}
+.role-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 26px 24px;
+  box-shadow: var(--card-shadow);
+  border-left: 5px solid var(--accent);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.role-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(13,59,110,0.18); }
+.role-card .role-icon { font-size: 2rem; margin-bottom: 10px; }
+.role-card .role-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.role-card .role-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.35;
+}
+.role-card .role-sub {
+  font-size: 0.83rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.about-school-info {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 30px 28px;
+  box-shadow: var(--card-shadow);
+  margin-bottom: 36px;
+  border-top: 4px solid var(--accent);
+}
+.about-school-info h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 14px;
+}
+.about-school-info p {
+  font-size: 0.93rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+.about-detail-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+}
+.about-detail-list li {
+  background: var(--bg);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.88rem;
+  color: var(--text);
+}
+.about-detail-list li strong { color: var(--primary); display: block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2px; }
+
+/* Designer credit */
+.designer-credit {
+  position: fixed;
+  bottom: 14px;
+  right: 16px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: white;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 0.83rem;
+  font-weight: 700;
+  box-shadow: 0 4px 16px rgba(13,59,110,0.3);
+  text-align: right;
+  z-index: 50;
+  line-height: 1.4;
+}
+.designer-credit span {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 400;
+  opacity: 0.82;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="school-emblem">🏫</div>
+    <div class="header-text">
+      <h1>जिल्हा परिषद उर्दू शाळा पोरगव्हाण</h1>
+      <div class="subtitle">पंचायत समिती मोर्शी, जिल्हा अमरावती</div>
+      <div class="udise">UDISE Code: 27071105402</div>
+    </div>
+    <div class="header-urdu">
+      ضلع پریشد اردو اسکول پورگوہان
+      <span class="urdu-sub">پنچایت سمیتی مورشی، ضلع امراوتی</span>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">🏠 Home</a>
+      <a href="photos.html">📷 Photos</a>
+      <a href="videos.html">🎬 Videos</a>
+      <a href="activity.html">🎯 Activities</a>
+      <a href="about.html" class="active">ℹ️ About</a>
+      <a href="result.html">📊 Results</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="page-title">
+    <h2>About Our School</h2>
+    <p>Meet the team behind Z.P. Urdu School Porgavhan</p>
+  </div>
+
+  <!-- School Info -->
+  <div class="about-school-info">
+    <h3>🏫 School Overview</h3>
+    <p>Z.P. Urdu School Porgavhan is an Urdu-medium primary school run under the Zilla Parishad, Amravati. The school is affiliated with Panchayat Samiti, Morshi and follows the Maharashtra state curriculum, providing quality education to children of the local community.</p>
+    <ul class="about-detail-list">
+      <li><strong>School Name</strong>Z.P. Urdu School Porgavhan</li>
+      <li><strong>UDISE Code</strong>27071105402</li>
+      <li><strong>Medium</strong>Urdu</li>
+      <li><strong>Board</strong>Maharashtra State Board</li>
+      <li><strong>Classes</strong>Class 1 to Class 8</li>
+      <li><strong>Panchayat Samiti</strong>Morshi</li>
+      <li><strong>District</strong>Amravati</li>
+      <li><strong>Type</strong>Government (Zilla Parishad)</li>
+    </ul>
+  </div>
+
+  <!-- Key Personnel -->
+  <div class="page-title">
+    <h2>School Administration</h2>
+    <p>Our dedicated team of educators and administrators</p>
+  </div>
+
+  <div class="about-grid">
+
+    <div class="role-card">
+      <div class="role-icon">👨‍💼</div>
+      <div class="role-title">Head Master</div>
+      <div class="role-name">Tahseen Sarfaraz Asghar Shahid Akhtar</div>
+      <div class="role-sub">Z.P. Urdu School Porgavhan</div>
+    </div>
+
+    <div class="role-card">
+      <div class="role-icon">🏫</div>
+      <div class="role-title">Cluster Head</div>
+      <div class="role-name">Sunil Bokade Saheb</div>
+      <div class="role-sub">Cluster Sawarkhed</div>
+    </div>
+
+    <div class="role-card">
+      <div class="role-icon">📋</div>
+      <div class="role-title">Vistar Adhikari</div>
+      <div class="role-name">Gaikwad Saheb</div>
+      <div class="role-sub">Panchayat Samiti Morshi</div>
+    </div>
+
+    <div class="role-card">
+      <div class="role-icon">🏛️</div>
+      <div class="role-title">Block Officer (BO)</div>
+      <div class="role-name">Nitin Hunde Saheb</div>
+      <div class="role-sub">Panchayat Samiti Morshi</div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2026 Z.P. Urdu School Porgavhan &nbsp;|&nbsp; Panchayat Samiti Morshi, Amravati</p>
+</footer>
+
+<!-- Designer Credit -->
+<div class="designer-credit">
+  Naved Iqbal
+  <span>Senior Cloud Engineer</span>
+</div>
+
+<script>
+function toggleNav() {
+  document.getElementById('navLinks').classList.toggle('open');
+}
+</script>
+</body>
+</html>
