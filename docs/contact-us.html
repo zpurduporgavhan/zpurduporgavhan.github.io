@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us – Z.P. Urdu School Porgavhan</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.contact-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.contact-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 26px 24px;
+  box-shadow: var(--card-shadow);
+  text-align: center;
+}
+
+.contact-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.contact-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.contact-card p {
+  font-size: 0.93rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.contact-card a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+.contact-form {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 30px 28px;
+  box-shadow: var(--card-shadow);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-family: inherit;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(13, 59, 110, 0.1);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.submit-btn {
+  background-color: var(--accent);
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #0a3a6f;
+}
+
+.location-info {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 30px 28px;
+  box-shadow: var(--card-shadow);
+  margin-bottom: 30px;
+  border-left: 5px solid var(--accent);
+}
+
+.location-info h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 14px;
+}
+
+.location-info p {
+  font-size: 0.93rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 6px 0;
+}
+
+.hours-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.hours-list li {
+  font-size: 0.93rem;
+  color: var(--text-muted);
+  padding: 4px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hours-list .day {
+  font-weight: 600;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="school-emblem">🏫</div>
+    <div class="header-text">
+      <h1>जिल्हा परिषद उर्दू शाळा पोरगव्हाण</h1>
+      <div class="subtitle">पंचायत समिती मोर्शी, जिल्हा अमरावती</div>
+      <div class="udise">UDISE Code: 27071105402</div>
+    </div>
+    <div class="header-urdu">
+      ضلع پریشد اردو اسکول پورگوہان
+      <span class="urdu-sub">پنچایت سمیتی مورشی، ضلع امراوتی</span>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">🏠 Home</a>
+      <a href="photos.html">📷 Photos</a>
+      <a href="videos.html">🎬 Videos</a>
+      <a href="activity.html">🎯 Activities</a>
+      <a href="result.html">📊 Results</a>
+      <a href="admission.html">🎓 Admission</a>
+      <a href="contact-us.html" class="active">📞 Contact Us</a>
+      <a href="about.html">ℹ️ About</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="contact-container">
+    <div class="page-title">
+      <h2>Contact Us</h2>
+      <p>Get in touch with Z.P. Urdu School Porgavhan</p>
+    </div>
+
+    <div class="contact-info-grid">
+      <div class="contact-card">
+        <div class="icon">📍</div>
+        <h3>Address</h3>
+        <p>Porgavhan<br>Panchayat Samiti Morshi<br>Amravati, Maharashtra</p>
+      </div>
+
+      <!-- <div class="contact-card">
+        <div class="icon">📞</div>
+        <h3>Phone</h3>
+        <p><a href="tel:+911234567890">+91-1234567890</a><br>Call us during school hours</p>
+      </div> -->
+
+      <div class="contact-card">
+        <div class="icon">📧</div>
+        <h3>Email</h3>
+        <p><a href="mailto:zpurduporgavhan@example.com">zpurduporgavhan@example.com</a><br>We respond within 24 hours</p>
+      </div>
+    </div>
+
+    <div class="location-info">
+      <h3>📅 School Hours</h3>
+      <ul class="hours-list">
+        <li><span class="day">Monday – Friday:</span> <span>7:00 AM – 10:00 AM</span></li>
+        <li><span class="day">Saturday:</span> <span>7:00 AM – 10:00 AM</span></li>
+        <li><span class="day">Sunday:</span> <span>Closed</span></li>
+      </ul>
+      <p style="margin-top: 16px; font-size: 0.88rem; color: var(--text-muted);">School holidays as per Maharashtra government calendar</p>
+    </div>
+<!-- 
+    <div class="contact-form">
+      <h3>📝 Send us a Message</h3>
+      <form onsubmit="event.preventDefault(); alert('Thank you for your message. We will get back to you soon.');">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject *</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="category">Inquiry Category</label>
+          <select id="category" name="category">
+            <option value="">Select Category</option>
+            <option value="admission">Admission Inquiry</option>
+            <option value="academic">Academic Question</option>
+            <option value="event">Event Information</option>
+            <option value="complaint">Complaint/Feedback</option>
+            <option value="general">General Inquiry</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div> -->
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 Z.P. Urdu School Porgavhan &nbsp;|&nbsp; Panchayat Samiti Morshi, Amravati &nbsp;|&nbsp;
+    <a href="photos.html">Photos</a> · <a href="videos.html">Videos</a> · <a href="result.html">Results</a>
+  </p>
+</footer>
+
+<script>
+function toggleNav() {
+  document.getElementById('navLinks').classList.toggle('open');
+}
+</script>
+
+</body>
+</html>

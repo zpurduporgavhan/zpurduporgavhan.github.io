@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admission – Z.P. Urdu School Porgavhan</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.admission-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.admission-info {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 30px 28px;
+  box-shadow: var(--card-shadow);
+  margin-bottom: 30px;
+  border-top: 4px solid var(--accent);
+}
+
+.admission-info h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 14px;
+}
+
+.admission-info p {
+  font-size: 0.93rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.admission-info ul {
+  font-size: 0.93rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-left: 20px;
+}
+
+.admission-info li {
+  margin-bottom: 8px;
+}
+
+.admission-form {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 30px 28px;
+  box-shadow: var(--card-shadow);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-family: inherit;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(13, 59, 110, 0.1);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.submit-btn {
+  background-color: var(--accent);
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #0a3a6f;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="school-emblem">🏫</div>
+    <div class="header-text">
+      <h1>जिल्हा परिषद उर्दू शाळा पोरगव्हाण</h1>
+      <div class="subtitle">पंचायत समिती मोर्शी, जिल्हा अमरावती</div>
+      <div class="udise">UDISE Code: 27071105402</div>
+    </div>
+    <div class="header-urdu">
+      ضلع پریشد اردو اسکول پورگوہان
+      <span class="urdu-sub">پنچایت سمیتی مورشی، ضلع امراوتی</span>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">🏠 Home</a>
+      <a href="photos.html">📷 Photos</a>
+      <a href="videos.html">🎬 Videos</a>
+      <a href="activity.html">🎯 Activities</a>
+      <a href="result.html">📊 Results</a>
+      <a href="admission.html" class="active">🎓 Admission</a>
+      <a href="contact-us.html">📞 Contact Us</a>
+      <a href="about.html">ℹ️ About</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="admission-container">
+    <div class="page-title">
+      <h2>Admission Information</h2>
+      <p>Join Z.P. Urdu School Porgavhan</p>
+    </div>
+
+    <div class="admission-info">
+      <h3>📋 General Information</h3>
+      <p>Z.P. Urdu School Porgavhan welcomes students from all backgrounds and communities. We provide quality education in the Urdu medium aligned with Maharashtra state curriculum.</p>
+      <p><strong>Academic Session:</strong> June to May</p>
+      <p><strong>School Code (UDISE):</strong> 27071105402</p>
+    </div>
+
+    <div class="admission-info">
+      <h3>🎯 Eligibility Criteria</h3>
+      <ul>
+        <li>Students should meet the age requirements as per government standards</li>
+        <li>Documents: Birth Certificate, Transfer Certificate (if from another school)</li>
+        <li>Address proof and parent/guardian identification</li>
+        <li>All applicants are welcome regardless of religious or social background</li>
+      </ul>
+    </div>
+
+    <div class="admission-info">
+      <h3>📝 Required Documents</h3>
+      <ul>
+        <li>Birth Certificate (original and copy)</li>
+        <li>Transfer Certificate (TC) from previous school</li>
+        <li>Aadhar Card or any government ID of student</li>
+        <li>Parent/Guardian ID proof (Aadhar/PAN/Voter ID)</li>
+        <li>Address proof (utility bill/rent agreement)</li>
+        <li>Passport-size photographs (4 copies)</li>
+      </ul>
+    </div>
+
+    <div class="admission-info">
+      <h3>💬 Contact Information</h3>
+      <p>For more details about admission and availability, please contact us:</p>
+      <p><strong>Email:</strong> zpurduporgavhan@example.com</p>
+    </div>
+<!-- 
+    <div class="admission-form">
+      <h3>📝 Admission Inquiry Form</h3>
+      <form onsubmit="event.preventDefault(); alert('Thank you for your inquiry. We will contact you soon.');">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="student-name">Student Name *</label>
+            <input type="text" id="student-name" name="student-name" required>
+          </div>
+          <div class="form-group">
+            <label for="class">Class Seeking Admission *</label>
+            <select id="class" name="class" required>
+              <option value="">Select Class</option>
+              <option value="1">Class 1</option>
+              <option value="2">Class 2</option>
+              <option value="3">Class 3</option>
+              <option value="4">Class 4</option>
+              <option value="5">Class 5</option>
+              <option value="6">Class 6</option>
+              <option value="7">Class 7</option>
+              <option value="8">Class 8</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="parent-name">Parent/Guardian Name *</label>
+            <input type="text" id="parent-name" name="parent-name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="dob">Date of Birth *</label>
+            <input type="date" id="dob" name="dob" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="address">Address *</label>
+          <textarea id="address" name="address" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Additional Message</label>
+          <textarea id="message" name="message"></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Inquiry</button>
+      </form>
+    </div> -->
+
+
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 Z.P. Urdu School Porgavhan &nbsp;|&nbsp; Panchayat Samiti Morshi, Amravati &nbsp;|&nbsp;
+    <a href="photos.html">Photos</a> · <a href="videos.html">Videos</a> · <a href="result.html">Results</a>
+  </p>
+</footer>
+
+<script>
+function toggleNav() {
+  document.getElementById('navLinks').classList.toggle('open');
+}
+</script>
+
+</body>
+</html>
