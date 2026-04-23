@@ -6,42 +6,7 @@
 <title>About – Z.P. Urdu School Porgavhan</title>
 <link rel="stylesheet" href="style.css">
 <style>
-.about-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 22px;
-  margin-bottom: 40px;
-}
-.role-card {
-  background: var(--white);
-  border-radius: var(--radius);
-  padding: 26px 24px;
-  box-shadow: var(--card-shadow);
-  border-left: 5px solid var(--accent);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.role-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(13,59,110,0.18); }
-.role-card .role-icon { font-size: 2rem; margin-bottom: 10px; }
-.role-card .role-title {
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--accent);
-  margin-bottom: 6px;
-}
-.role-card .role-name {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--primary);
-  line-height: 1.35;
-}
-.role-card .role-sub {
-  font-size: 0.83rem;
-  color: var(--text-muted);
-  margin-top: 4px;
-}
-
+/* ── ABOUT PAGE STYLES ─────────────────────── */
 .about-school-info {
   background: var(--white);
   border-radius: var(--radius);
@@ -77,9 +42,97 @@
   font-size: 0.88rem;
   color: var(--text);
 }
-.about-detail-list li strong { color: var(--primary); display: block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2px; }
+.about-detail-list li strong {
+  color: var(--primary);
+  display: block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
 
-/* Designer credit */
+/* ── STAFF CARDS ───────────────────────────── */
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
+  margin-bottom: 40px;
+}
+
+.staff-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.22s, box-shadow 0.22s;
+  border-bottom: 4px solid var(--accent);
+}
+.staff-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(13,59,110,0.18);
+}
+
+/* Photo area */
+.staff-photo-wrap {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: linear-gradient(135deg, #dbe8f8, #eaf2fb);
+  position: relative;
+}
+.staff-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.4s;
+}
+.staff-card:hover .staff-photo-wrap img {
+  transform: scale(1.05);
+}
+/* Fallback avatar shown when no photo */
+.staff-photo-wrap .avatar-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  color: var(--primary);
+  opacity: 0.18;
+}
+
+/* Info below photo */
+.staff-info {
+  padding: 18px 16px 20px;
+}
+.staff-role-badge {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  padding: 3px 12px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.staff-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.35;
+  margin-bottom: 5px;
+}
+.staff-sub {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+/* ── DESIGNER CREDIT ───────────────────────── */
 .designer-credit {
   position: fixed;
   bottom: 14px;
@@ -100,6 +153,10 @@
   font-size: 0.72rem;
   font-weight: 400;
   opacity: 0.82;
+}
+
+@media (max-width: 640px) {
+  .staff-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
 }
 </style>
 </head>
@@ -144,7 +201,7 @@
     <p>Meet the team behind Z.P. Urdu School Porgavhan</p>
   </div>
 
-  <!-- School Info -->
+  <!-- School Overview -->
   <div class="about-school-info">
     <h3>🏫 School Overview</h3>
     <p>Z.P. Urdu School Porgavhan is an Urdu-medium primary school run under the Zilla Parishad, Amravati. The school is affiliated with Panchayat Samiti, Morshi and follows the Maharashtra state curriculum, providing quality education to children of the local community.</p>
@@ -160,40 +217,72 @@
     </ul>
   </div>
 
-  <!-- Key Personnel -->
+  <!-- School Administration — ordered as requested -->
   <div class="page-title">
     <h2>School Administration</h2>
     <p>Our dedicated team of educators and administrators</p>
   </div>
 
-  <div class="about-grid">
+  <div class="staff-grid">
 
-    <div class="role-card">
-      <div class="role-icon">👨‍💼</div>
-      <div class="role-title">Head Master</div>
-      <div class="role-name">Tahseen Sarfaraz Asghar Shahid Akhtar</div>
-      <div class="role-sub">Z.P. Urdu School Porgavhan</div>
+    <!-- 1. Block Officer (BO) -->
+    <div class="staff-card">
+      <div class="staff-photo-wrap">
+        <div class="avatar-fallback">👤</div>
+        <img src="photos/staff/bo.jpg"
+             alt="Nitin Unde Saheb – Block Officer"
+             onerror="this.style.display='none'">
+      </div>
+      <div class="staff-info">
+        <div class="staff-role-badge">Block Officer (BO)</div>
+        <div class="staff-name">Nitin Unde Saheb</div>
+        <div class="staff-sub">Panchayat Samiti Morshi</div>
+      </div>
     </div>
 
-    <div class="role-card">
-      <div class="role-icon">👨‍💼</div>
-      <div class="role-title">Cluster Head</div>
-      <div class="role-name">Sunil Bokade Saheb</div>
-      <div class="role-sub">Cluster Sawarkhed</div>
+    <!-- 2. Vistar Adhikari -->
+    <div class="staff-card">
+      <div class="staff-photo-wrap">
+        <div class="avatar-fallback">👤</div>
+        <img src="photos/staff/vistar_adhikari.jpg"
+             alt="Gaikwad Saheb – Vistar Adhikari"
+             onerror="this.style.display='none'">
+      </div>
+      <div class="staff-info">
+        <div class="staff-role-badge">Vistar Adhikari</div>
+        <div class="staff-name">Gaikwad Saheb</div>
+        <div class="staff-sub">Panchayat Samiti Morshi</div>
+      </div>
     </div>
 
-    <div class="role-card">
-      <div class="role-icon">👨‍💼</div>
-      <div class="role-title">Vistar Adhikari</div>
-      <div class="role-name">Gaikwad Saheb</div>
-      <div class="role-sub">Panchayat Samiti Morshi</div>
+    <!-- 3. Cluster Head -->
+    <div class="staff-card">
+      <div class="staff-photo-wrap">
+        <div class="avatar-fallback">👤</div>
+        <img src="photos/staff/cluster_head.jpg"
+             alt="Sunil Bokade Saheb – Cluster Head"
+             onerror="this.style.display='none'">
+      </div>
+      <div class="staff-info">
+        <div class="staff-role-badge">Cluster Head</div>
+        <div class="staff-name">Sunil Bokade Saheb</div>
+        <div class="staff-sub">Cluster Sawarkhed</div>
+      </div>
     </div>
 
-    <div class="role-card">
-      <div class="role-icon">👨‍💼</div>
-      <div class="role-title">Block Officer (BO)</div>
-      <div class="role-name">Nitin Unde Saheb</div>
-      <div class="role-sub">Panchayat Samiti Morshi</div>
+    <!-- 4. Head Master -->
+    <div class="staff-card">
+      <div class="staff-photo-wrap">
+        <div class="avatar-fallback">👤</div>
+        <img src="photos/staff/headmaster.jpg"
+             alt="Tahseen Sarfaraz – Head Master"
+             onerror="this.style.display='none'">
+      </div>
+      <div class="staff-info">
+        <div class="staff-role-badge">Head Master</div>
+        <div class="staff-name">Tahseen Sarfaraz Asghar Shahid Akhtar</div>
+        <div class="staff-sub">Z.P. Urdu School Porgavhan</div>
+      </div>
     </div>
 
   </div>
