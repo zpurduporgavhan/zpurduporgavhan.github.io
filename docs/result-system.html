@@ -487,18 +487,92 @@ tbody tr:hover { background: #eef4fc; }
 /* Watermark */
 #watermark { display:none; }
 
-/* Print */
+/* ── PRINT / A4 LANDSCAPE ─────────────── */
+@page {
+  size: A4 landscape;
+  margin: 12mm 10mm 12mm 10mm;
+}
+
 @media print {
-  .tab-bar, .btn-actions, .form-bar, #entryTable, .tip, .tab-btn { display: none !important; }
-  .tab-panel { display: block !important; }
-  #printHeader { display: block; text-align: center; margin-bottom: 20px; }
+  /* Hide interactive UI */
+  header, nav, .tab-bar, .btn-actions, .form-bar,
+  #entryTable, .tip, .tab-btn, footer { display: none !important; }
+
+  /* Show all tab panels stacked */
+  .tab-panel { display: block !important; padding: 0 !important; }
+
+  /* Reset body */
+  body {
+    background: white !important;
+    font-size: 10pt;
+    color: #000 !important;
+  }
+
+  /* Print header */
+  #printHeader {
+    display: block;
+    text-align: center;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #0d3b6e;
+  }
+  #printHeader h2 { font-size: 13pt; color: #0d3b6e; }
+  #printHeader p  { font-size: 9pt; color: #555; margin-top: 4px; }
+
+  /* Section headings */
+  .section-heading { font-size: 10pt; margin: 16px 0 8px; page-break-after: avoid; }
+
+  /* Table wrapper — no extra shadow/radius needed */
+  .table-wrap { box-shadow: none !important; border-radius: 0 !important; overflow: visible !important; }
+
+  /* Tables */
+  table { width: 100% !important; font-size: 8pt !important; border-collapse: collapse !important; }
+  thead th { background: #0d3b6e !important; color: white !important; padding: 5px 6px !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  tbody td { padding: 4px 6px !important; border-bottom: 0.5pt solid #d0daea !important; }
+  tbody tr:nth-child(even) { background: #f7fafd !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  /* Grade chips — keep colours */
+  .grade-chip { -webkit-print-color-adjust: exact; print-color-adjust: exact; font-size: 7pt !important; padding: 1px 5px !important; }
+
+  /* KPI row */
+  .kpi-row { grid-template-columns: repeat(5, 1fr) !important; gap: 8px !important; margin-bottom: 14px !important; }
+  .kpi-card { box-shadow: none !important; border: 1pt solid #d0daea !important; padding: 10px 10px !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .kpi-value { font-size: 16pt !important; }
+
+  /* Chart grid — side-by-side */
+  .chart-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 12px !important; margin-bottom: 14px !important; }
+  .chart-card { box-shadow: none !important; border: 0.5pt solid #d0daea !important; padding: 10px !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .chart-title { font-size: 8pt !important; margin-bottom: 8px !important; }
+
+  /* Bar charts */
+  .bar-fill { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .bar-track { background: #eef2f8 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  /* Gender bars */
+  .gender-boy, .gender-girl { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  /* Heatmap cells */
+  .heat-cell { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  /* Top performers */
+  .top-item { -webkit-print-color-adjust: exact; print-color-adjust: exact; padding: 6px 10px !important; }
+
+  /* Avoid page-breaks inside key elements */
+  .kpi-row, .chart-card, .table-wrap, .top-item { page-break-inside: avoid; }
+
+  /* Force page break before each major section */
+  #panel-matrix   { page-break-before: always; }
+  #panel-dashboard { page-break-before: always; }
+
+  /* Watermark */
   #watermark {
     display: block;
-    position: fixed; top:50%; left:50%;
-    transform: translate(-50%,-50%);
-    font-size: 55px; font-weight: bold;
-    color: rgba(180,180,180,0.22);
+    position: fixed; top: 50%; left: 50%;
+    transform: translate(-50%, -50%) rotate(-30deg);
+    font-size: 60pt; font-weight: bold;
+    color: rgba(180,180,180,0.18);
     white-space: nowrap; z-index: -1;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
   }
 }
 
@@ -618,6 +692,11 @@ tbody tr:hover { background: #eef4fc; }
   <div class="section-heading">📊 Student Summary — Grade Matrix</div>
   <div class="table-wrap">
     <div id="matrixSummary" style="padding:20px;color:var(--muted);text-align:center;">Generate results from the Data Entry tab first.</div>
+  </div>
+
+  <div class="section-heading" style="margin-top:28px;">🏅 Total Number by Grade</div>
+  <div class="table-wrap">
+    <div id="gradeTotalSummary" style="padding:20px;color:var(--muted);text-align:center;">Generate results from the Data Entry tab first.</div>
   </div>
 </div>
 
@@ -841,11 +920,14 @@ function submitData() {
 /* ── MATRIX ───────────────────────────── */
 function generateMatrix(summaryData, subjects) {
   const grades = ['A1','A2','B1','B2','C1','C2','D','E'];
+
+  // Grade Matrix with subject totals row
   let html = '<table><tr><th rowspan="2" style="background:var(--primary);color:white">Grade</th>';
   subjects.forEach(sub => html += `<th colspan="3" style="background:var(--primary);color:white">${sub}</th>`);
   html += '</tr><tr>';
   subjects.forEach(() => html += '<th style="background:#1a4f8a;color:white">B</th><th style="background:#1a4f8a;color:white">G</th><th style="background:#1a4f8a;color:white">T</th>');
   html += '</tr>';
+
   grades.forEach(g => {
     html += `<tr><td><span class="grade-chip" style="background:${GRADE_COLORS[g]}">${g}</span></td>`;
     subjects.forEach(sub => {
@@ -854,8 +936,77 @@ function generateMatrix(summaryData, subjects) {
     });
     html += '</tr>';
   });
-  html += '</table>';
+
+  // Subject totals row
+  html += `<tr style="background:#e8f0fb;border-top:2px solid var(--primary)">
+    <td style="font-weight:800;color:var(--primary);text-align:center">Total</td>`;
+  subjects.forEach(sub => {
+    let bTotal = 0, gTotal = 0;
+    grades.forEach(g => {
+      const d = (summaryData[sub] && summaryData[sub][g]) || { boy:0, girl:0, total:0 };
+      bTotal += d.boy;
+      gTotal += d.girl;
+    });
+    html += `<td style="font-weight:700">${bTotal||'-'}</td><td style="font-weight:700">${gTotal||'-'}</td><td style="font-weight:800;color:var(--primary)">${(bTotal+gTotal)||'-'}</td>`;
+  });
+  html += '</tr></table>';
   document.getElementById('matrixSummary').innerHTML = html;
+
+  // Total Number by Grade section
+  const overallByGrade = {};
+  grades.forEach(g => overallByGrade[g] = { boy:0, girl:0, total:0 });
+  studentData.forEach(s => {
+    if (overallByGrade[s.grade]) {
+      if (s.gender === 'Boy') overallByGrade[s.grade].boy++;
+      else overallByGrade[s.grade].girl++;
+      overallByGrade[s.grade].total++;
+    }
+  });
+
+  let totalBoys = 0, totalGirls = 0, grandTotal = 0;
+  let gt = `<table>
+    <thead>
+      <tr>
+        <th style="background:var(--primary);color:white">Grade</th>
+        <th style="background:#2980b9;color:white">\u{1F466} Boys</th>
+        <th style="background:#c0392b;color:white">\u{1F467} Girls</th>
+        <th style="background:#0d3b6e;color:white">Total</th>
+        <th style="background:var(--primary);color:white">% of Class</th>
+      </tr>
+    </thead><tbody>`;
+
+  grades.forEach(g => {
+    const d = overallByGrade[g];
+    if (!d.total) return;
+    totalBoys  += d.boy;
+    totalGirls += d.girl;
+    grandTotal += d.total;
+    const pct = ((d.total / studentData.length) * 100).toFixed(1);
+    gt += `<tr>
+      <td><span class="grade-chip" style="background:${GRADE_COLORS[g]}">${g}</span></td>
+      <td style="font-weight:700">${d.boy||'-'}</td>
+      <td style="font-weight:700">${d.girl||'-'}</td>
+      <td style="font-weight:800;color:var(--primary)">${d.total}</td>
+      <td>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <div style="flex:1;height:14px;background:#eef2f8;border-radius:4px;overflow:hidden">
+            <div style="width:${pct}%;height:100%;background:${GRADE_COLORS[g]};border-radius:4px;-webkit-print-color-adjust:exact;print-color-adjust:exact"></div>
+          </div>
+          <span style="font-size:0.78rem;font-weight:700;width:38px;text-align:right">${pct}%</span>
+        </div>
+      </td>
+    </tr>`;
+  });
+
+  gt += `<tr style="background:#e8f0fb;border-top:2px solid var(--primary)">
+    <td style="font-weight:800;color:var(--primary);text-align:center">Grand Total</td>
+    <td style="font-weight:800">${totalBoys}</td>
+    <td style="font-weight:800">${totalGirls}</td>
+    <td style="font-weight:800;color:var(--primary)">${grandTotal}</td>
+    <td style="font-weight:700;font-size:0.82rem;color:var(--muted)">100%</td>
+  </tr>`;
+  gt += '</tbody></table>';
+  document.getElementById('gradeTotalSummary').innerHTML = gt;
 }
 
 /* ══════════════════════════════════════
