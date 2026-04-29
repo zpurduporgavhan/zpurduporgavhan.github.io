@@ -4,133 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Performance Dashboard – Z.P. Urdu School Porgavhan</title>
+<link rel="stylesheet" href="style.css">
 <style>
-/* ── SCHOOL HEADER (matching style.css) ───── */
-header {
-  background: linear-gradient(135deg, #0d3b6e 0%, #1a4f8a 60%, #1a6fc4 100%);
-  color: white;
-  padding: 0;
-  box-shadow: 0 4px 16px rgba(13,59,110,0.3);
-}
-.header-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 16px 28px;
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-.school-emblem { font-size: 2.8rem; flex-shrink: 0; }
-.header-text { flex: 1; min-width: 200px; }
-.header-text h1 {
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
-  font-weight: 800;
-  line-height: 1.2;
-  color: white;
-  margin: 0 0 4px;
-}
-.subtitle { font-size: 0.85rem; opacity: 0.88; margin-top: 2px; }
-.udise { font-size: 0.75rem; opacity: 0.7; margin-top: 3px; letter-spacing: 0.03em; }
-.header-urdu {
-  font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', serif;
-  direction: rtl;
-  font-size: 1rem;
-  line-height: 1.8;
-  text-align: right;
-  color: rgba(255,255,255,0.92);
-  flex-shrink: 0;
-}
-.urdu-sub { display: block; font-size: 0.78rem; opacity: 0.75; }
-
-/* ── NAV ──────────────────────────────────── */
-nav {
-  background: white;
-  box-shadow: 0 2px 8px rgba(13,59,110,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 200;
-}
-.nav-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  padding: 0 20px;
-  gap: 4px;
-  overflow-x: auto;
-}
-.nav-links { display: flex; gap: 2px; flex-wrap: nowrap; }
-.nav-links a {
-  display: inline-block;
-  padding: 14px 14px;
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: #4a5568;
-  text-decoration: none;
-  border-bottom: 3px solid transparent;
-  white-space: nowrap;
-  transition: color 0.2s, border-color 0.2s;
-}
-.nav-links a:hover { color: #1a6fc4; }
-.nav-links a.active { color: #1a6fc4; border-bottom-color: #1a6fc4; }
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  margin-right: 6px;
-}
-.hamburger span {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: #0d3b6e;
-  border-radius: 2px;
-  transition: 0.3s;
-}
-@media (max-width: 768px) {
-  .hamburger { display: flex; }
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0; right: 0;
-    background: white;
-    flex-direction: column;
-    padding: 10px 0;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    z-index: 300;
-  }
-  .nav-links.open { display: flex; }
-  .nav-links a { padding: 12px 24px; border-bottom: none; border-left: 3px solid transparent; }
-  .nav-links a.active { border-left-color: #1a6fc4; border-bottom-color: transparent; }
-}
-
-/* ── FOOTER ───────────────────────────────── */
-footer {
-  background: #0d3b6e;
-  color: rgba(255,255,255,0.8);
-  text-align: center;
-  padding: 20px;
-  font-size: 0.82rem;
-  margin-top: 40px;
-}
-footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
-footer a:hover { color: white; }
-
-/* Override tab-bar z-index so it sits below sticky nav */
-.tab-bar { position: sticky; top: 49px; z-index: 150; }
 
 /* ── RESET & BASE ─────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
   --primary:   #0d3b6e;
-  --accent:    #1a6fc4;
+  --accent:    #e8a020;
   --gold:      #e8a020;
   --green:     #27ae60;
   --red:       #e74c3c;
@@ -156,16 +38,6 @@ body {
   padding: 0;
   min-height: 100vh;
 }
-
-/* ── HEADER ───────────────────────────────── */
-.app-header {
-  background: linear-gradient(135deg, var(--primary) 0%, #1a4f8a 100%);
-  color: white;
-  padding: 20px 28px 16px;
-  box-shadow: 0 4px 16px rgba(13,59,110,0.3);
-}
-.app-header h1 { font-size: 1.3rem; font-weight: 700; letter-spacing: -0.01em; }
-.app-header p  { font-size: 0.82rem; opacity: 0.75; margin-top: 3px; }
 
 /* ── TAB BAR ──────────────────────────────── */
 .tab-bar {
