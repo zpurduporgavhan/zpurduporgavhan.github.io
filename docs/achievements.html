@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Achievements – Z.P. Urdu School Porgavhan</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .achievement-shell {
+    max-width: 1100px;
+    margin: 24px auto 40px;
+    display: grid;
+    gap: 22px;
+  }
+  .achievement-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    padding: 26px 24px;
+    border-top: 4px solid var(--accent);
+  }
+  .achievement-badge {
+    display: inline-block;
+    background: var(--primary);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+  }
+  .achievement-card h3 {
+    color: var(--primary);
+    font-size: clamp(1.2rem, 2vw, 1.7rem);
+    margin: 0 0 12px;
+    line-height: 1.4;
+  }
+  .achievement-card p {
+    color: var(--text-muted);
+    line-height: 1.8;
+    font-size: 0.96rem;
+    margin: 0;
+  }
+  .certificate-wrap {
+    margin-top: 22px;
+    background: #f5f9ff;
+    border: 1px solid #dfeafc;
+    border-radius: 16px;
+    padding: 14px;
+    overflow: hidden;
+  }
+  .certificate-wrap img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 12px 28px rgba(13,59,110,0.1);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="school-emblem">🏫</div>
+    <div class="header-text">
+      <h1>जिल्हा परिषद उर्दू शाळा पोरगव्हाण</h1>
+      <div class="subtitle">पंचायत समिती मोर्शी, जिल्हा अमरावती</div>
+      <div class="udise">UDISE Code: 27071105402</div>
+    </div>
+    <div class="header-urdu">
+      ضلع پریشد اردو اسکول پورگوہان
+      <span class="urdu-sub">پنچایت سمیتی مورشی، ضلع امراوتی</span>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">🏠 Home</a>
+      <a href="photos.html">📷 Photos</a>
+      <a href="videos.html">🎬 Videos</a>
+      <a href="activity.html">🎯 Activities</a>
+      <a href="result.html">📊 Results</a>
+      <a href="admission.html">🎓 Admission</a>
+      <a href="contact-us.html">📞 Contact Us</a>
+      <a href="achievements.html" class="active">🏅 Achievements</a>
+      <a href="about.html">ℹ️ About</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="page-title">
+    <h2>School Achievements</h2>
+    <p>Celebrating excellence and hard work</p>
+  </div>
+
+  <div class="achievement-shell">
+    <div class="achievement-card">
+      <div class="achievement-badge">Scholarship</div>
+      <h3>Primary Scholarship Examination Std. 4th (PSE) / Upper Primary Scholarship Examination Std. 7th (UPS) - 2026</h3>
+      <p>One of our school students has passed the prestigious scholarship examination. This achievement reflects the dedication, perseverance, and academic excellence of the student, supported by the school's teachers and the encouragement of the school community.</p>
+      <div class="certificate-wrap">
+        <img src="photos/schoolership.png" alt="Scholarship certificate for the student" />
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 Z.P. Urdu School Porgavhan &nbsp;|&nbsp; Panchayat Samiti Morshi, Amravati &nbsp;|&nbsp;
+    <a href="photos.html">Photos</a> · <a href="videos.html">Videos</a> · <a href="result.html">Results</a>
+  </p>
+</footer>
+
+<script>
+function toggleNav() {
+  document.getElementById('navLinks').classList.toggle('open');
+}
+</script>
+</body>
+</html>
