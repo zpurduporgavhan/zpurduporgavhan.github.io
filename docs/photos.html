@@ -6,7 +6,6 @@
 <title>Photos – Z.P. Urdu School Porgavhan</title>
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/png" href="photos/school_logo.png">
-<style>@media(min-width:769px){.nav-links{flex-wrap:wrap;justify-content:center}}</style>
 </head>
 <body>
 
@@ -30,17 +29,17 @@
     <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
-    <div class="nav-links" id="navLinks">
+          <div class="nav-links" id="navLinks">
       <a href="index.html">🏠 Home</a>
       <a href="photos.html" class="active">📷 Photos</a>
       <a href="videos.html">🎬 Videos</a>
       <a href="activity.html">🎯 Activities</a>
       <a href="result.html">📊 Results</a>
+      <a href="achievements.html">🏅 Achievements</a>
+      <a href="scholarship.html">📝 Scholarship Test</a>
+      <a href="result-system.html">🧮 Result System</a>
       <a href="admission.html">🎓 Admission</a>
       <a href="contact-us.html">📞 Contact Us</a>
-      <a href="achievements.html">🏅 Achievements</a>
-      <a href="scholarship-test.html">📝 Scholarship Test</a>
-      <a href="result-system.html">📈 Performance Dashboard</a>
       <a href="about.html">ℹ️ About</a>
     </div>
   </div>
@@ -53,45 +52,45 @@
   </div>
 
   <div class="gallery" id="gallery">
-    <!-- Photos list — deduplicated and with forward slashes for GitHub Pages -->
-    <div class="gallery-item" onclick="openLightbox(0)"><img src="photos/IMG_20251017_111318.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(1)"><img src="photos/IMG_20251114_153921.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(2)"><img src="photos/IMG_20251115_080727.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(3)"><img src="photos/IMG_20251115_080736.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(4)"><img src="photos/IMG_20251115_080743.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(5)"><img src="photos/IMG_20251118_122922.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(6)"><img src="photos/IMG_20251118_123001.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(7)"><img src="photos/IMG_20251205_104917.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(8)"><img src="photos/IMG_20251206_092351.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(9)"><img src="photos/IMG_20251216_162950.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(10)"><img src="photos/IMG_20251217_111053.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(11)"><img src="photos/IMG_20251217_132836.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(12)"><img src="photos/IMG_20251217_162855.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(13)"><img src="photos/IMG_20251217_162858.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(14)"><img src="photos/IMG_20251219_124032.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(15)"><img src="photos/IMG_20251219_124115.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(16)"><img src="photos/IMG_20251219_141015.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(17)"><img src="photos/IMG_20251219_141018.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(18)"><img src="photos/IMG_20251219_142018.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(19)"><img src="photos/IMG_20251227_092857.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(20)"><img src="photos/IMG_20251227_092936.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(21)"><img src="photos/IMG_20251227_092937.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(22)"><img src="photos/IMG_20260106_123944.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(23)"><img src="photos/IMG_20260106_153207.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(24)"><img src="photos/IMG_20260106_153210.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(25)"><img src="photos/IMG_20260107_125146.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(26)"><img src="photos/IMG_20260108_123904.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(27)"><img src="photos/IMG_20260108_123910.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(28)"><img src="photos/IMG_20260108_123921.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(29)"><img src="photos/IMG_20260213_151758.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(30)"><img src="photos/IMG_20260213_151838.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(31)"><img src="photos/IMG_20260213_151941.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(32)"><img src="photos/IMG_20260213_151946.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(33)"><img src="photos/IMG_20260213_152349_1.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(34)"><img src="photos/IMG_20260213_152625.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(35)"><img src="photos/IMG_20260213_152602.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(36)"><img src="photos/IMG_20260411_093326.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
-    <div class="gallery-item" onclick="openLightbox(37)"><img src="photos/IMG_20260411_093304.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <!-- Photos list -->
+    <div class="gallery-item" onclick="openLightbox(0)"><img loading="lazy" src="photos/IMG_20251017_111318.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(1)"><img loading="lazy" src="photos/IMG_20251114_153921.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(2)"><img loading="lazy" src="photos/IMG_20251115_080727.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(3)"><img loading="lazy" src="photos/IMG_20251115_080736.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(4)"><img loading="lazy" src="photos/IMG_20251115_080743.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(5)"><img loading="lazy" src="photos/IMG_20251118_122922.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(6)"><img loading="lazy" src="photos/IMG_20251118_123001.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(7)"><img loading="lazy" src="photos/IMG_20251205_104917.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(8)"><img loading="lazy" src="photos/IMG_20251206_092351.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(9)"><img loading="lazy" src="photos/IMG_20251216_162950.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(10)"><img loading="lazy" src="photos/IMG_20251217_111053.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(11)"><img loading="lazy" src="photos/IMG_20251217_132836.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(12)"><img loading="lazy" src="photos/IMG_20251217_162855.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(13)"><img loading="lazy" src="photos/IMG_20251217_162858.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(14)"><img loading="lazy" src="photos/IMG_20251219_124032.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(15)"><img loading="lazy" src="photos/IMG_20251219_124115.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(16)"><img loading="lazy" src="photos/IMG_20251219_141015.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(17)"><img loading="lazy" src="photos/IMG_20251219_141018.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(18)"><img loading="lazy" src="photos/IMG_20251219_142018.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(19)"><img loading="lazy" src="photos/IMG_20251227_092857.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(20)"><img loading="lazy" src="photos/IMG_20251227_092936.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(21)"><img loading="lazy" src="photos/IMG_20251227_092937.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(22)"><img loading="lazy" src="photos/IMG_20260106_123944.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(23)"><img loading="lazy" src="photos/IMG_20260106_153207.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(24)"><img loading="lazy" src="photos/IMG_20260106_153210.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(25)"><img loading="lazy" src="photos/IMG_20260107_125146.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(26)"><img loading="lazy" src="photos/IMG_20260108_123904.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(27)"><img loading="lazy" src="photos/IMG_20260108_123910.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(28)"><img loading="lazy" src="photos/IMG_20260108_123921.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(29)"><img loading="lazy" src="photos/IMG_20260213_151758.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(30)"><img loading="lazy" src="photos/IMG_20260213_151838.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(31)"><img loading="lazy" src="photos/IMG_20260213_151941.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(32)"><img loading="lazy" src="photos/IMG_20260213_151946.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(33)"><img loading="lazy" src="photos/IMG_20260213_152349_1.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(34)"><img loading="lazy" src="photos/IMG_20260213_152625.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(35)"><img loading="lazy" src="photos/IMG_20260213_152602.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(36)"><img loading="lazy" src="photos/IMG_20260411_093326.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
+    <div class="gallery-item" onclick="openLightbox(37)"><img loading="lazy" src="photos/IMG_20260411_093304.jpg" alt="School Photo"><div class="overlay"><span>🔍</span></div></div>
   </div>
 </main>
 

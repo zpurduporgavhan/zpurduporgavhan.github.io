@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scholarship Practice Test – Z.P. Urdu School Porgavhan</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="photos/school_logo.png">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="school-emblem"><img src="photos/school_logo.png" alt="Z.P. Urdu School Porgavhan logo"></div>
+    <div class="header-text">
+      <h1>जिल्हा परिषद उर्दू शाळा पोरगव्हाण</h1>
+      <div class="subtitle">पंचायत समिती मोर्शी, जिल्हा अमरावती</div>
+      <div class="udise">UDISE Code: 27071105402</div>
+    </div>
+    <div class="header-urdu">
+      ضلع پریشد اردو اسکول پورگوہان
+      <span class="urdu-sub">پنچایت سمیتی مورشی، ضلع امراوتی</span>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">🏠 Home</a>
+      <a href="photos.html">📷 Photos</a>
+      <a href="videos.html">🎬 Videos</a>
+      <a href="activity.html">🎯 Activities</a>
+      <a href="result.html">📊 Results</a>
+      <a href="achievements.html">🏅 Achievements</a>
+      <a href="scholarship.html" class="active">📝 Scholarship Test</a>
+      <a href="result-system.html">🧮 Result System</a>
+      <a href="admission.html">🎓 Admission</a>
+      <a href="contact-us.html">📞 Contact Us</a>
+      <a href="about.html">ℹ️ About</a>
+    </div>
+  </div>
+</nav>
+
+<div class="embed-note">
+  Scholarship Exam 2027 practice (Std 4 &amp; Std 7 – Urdu &amp; Maths) ·
+  <a href="scholarship-practice.html" target="_blank" rel="noopener">Open full screen ↗</a>
+</div>
+<iframe id="practiceFrame" class="embed-frame" src="scholarship-practice.html" title="Scholarship Exam Practice Test"></iframe>
+
+<footer>
+  <p>© 2026 Z.P. Urdu School Porgavhan &nbsp;|&nbsp; Panchayat Samiti Morshi, Amravati</p>
+</footer>
+
+<script>
+function toggleNav() {
+  document.getElementById('navLinks').classList.toggle('open');
+}
+// Grow the frame to fit the test so the page scrolls once. Falls back to a fixed
+// height with inner scrolling if the browser blocks access (e.g. opened from file://).
+const frame = document.getElementById('practiceFrame');
+function fit() {
+  try {
+    const d = frame.contentDocument;
+    frame.style.height = Math.max(d.documentElement.scrollHeight, d.body.scrollHeight) + 'px';
+  } catch (e) { frame.style.height = '90vh'; }
+}
+frame.addEventListener('load', () => {
+  fit();
+  try { new ResizeObserver(fit).observe(frame.contentDocument.body); } catch (e) {}
+});
+window.addEventListener('resize', fit);
+</script>
+</body>
+</html>
